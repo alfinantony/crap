@@ -1,38 +1,289 @@
-.App {
-  text-align: center;
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #101820; /* Charcoal Black Background */
+  color: #f8f9fa; /* Ghost White Text */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Header and Navbar Styling */
+.header {
+  background-color: #0d1b2a; /* Dark Charcoal */
+  padding: 1.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid #1e90ff; /* Electric Blue Border */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar-custom {
+  background: transparent;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-links {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-custom .nav-links a {
+  color: #f8f9fa; /* Ghost White */
+  margin: 0 1rem;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-custom .nav-links a:hover {
+  color: #1e90ff; /* Electric Blue */
+  text-shadow: 0 0 6px #1e90ff; /* Blue Glow Effect */
+}
+
+/* Logo Styling */
+.logo {
+  font-size: 2rem;
+  color: #f8f9fa; /* Ghost White */
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #000000; /* Dark Shadow for Depth */
+}
+
+/* Section Styles */
+.section {
+  padding: 5rem 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #1e90ff; /* Electric Blue */
+}
+
+.section-subtitle {
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #1e90ff; /* Electric Blue */
+}
+
+.section-description {
+  font-size: 1.125rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  color: #d3d3d3; /* Light Gray */
+}
+
+/* About Section */
+.about-section {
+  background-color: #0d1b2a; /* Dark Charcoal */
+  padding: 80px 0;
+  color: #f8f9fa; /* Ghost White Text */
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.about-text {
+  padding: 2rem;
+}
+
+/* Service Card Styles */
+.service-card {
+  background-color: #2e3a40; /* Slate Gray */
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 2px solid #1e90ff; /* Electric Blue Border */
+}
+
+.service-card:hover {
+  transform: translateY(-8px); /* Slight Lift on Hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Service Titles and Descriptions */
+.service-title {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #1e90ff; /* Electric Blue */
+}
+
+.service-description {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #f8f9fa; /* Ghost White */
+}
+
+/* Button Styles */
+.learn-more-button {
+  border: 2px solid #1e90ff; /* Electric Blue Border */
+  color: #1e90ff; /* Electric Blue Text Color */
+  background-color: transparent;
+  font-size: 1.125rem;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.learn-more-button:hover {
+  background-color: #1e90ff; /* Electric Blue Background */
+  color: #f8f9fa; /* Ghost White Text */
+  border-color: #1e90ff; /* Electric Blue Border */
+}
+
+/* Team Section */
+.team-section {
+  background-color: #0d1b2a; /* Dark Charcoal */
+  padding: 80px 0;
+  color: #f8f9fa; /* Ghost White Text */
+}
+
+.team-card {
+  background-color: #2e3a40; /* Slate Gray */
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #1e90ff; /* Electric Blue Border */
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Team Image and Text */
+.team-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.team-name {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: #1e90ff; /* Electric Blue */
+}
+
+.team-role {
+  font-size: 1.25rem;
+  color: #d3d3d3; /* Light Gray */
+  margin-bottom: 1rem;
+}
+
+.team-description {
+  font-size: 0.875rem;
+  color: #d3d3d3; /* Light Gray */
+}
+
+/* Contact Section */
+.contact-section {
+  background-color: #101820; /* Charcoal Black */
+  padding: 60px 0;
+  color: #f8f9fa; /* Ghost White Text */
+}
+
+.contact-info, .contact-form {
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.8); /* Darker Background for Contrast */
+  border-radius: 8px;
+}
+
+.contact-info {
+  margin-bottom: 2rem;
+  border: 2px solid #1e90ff; /* Electric Blue Border */
+}
+
+.contact-info-box p {
+  margin: 0.5rem 0;
+}
+
+.contact-info-box a {
+  color: #1e90ff; /* Electric Blue */
+  text-decoration: none;
+}
+
+.contact-info-box a:hover {
+  text-decoration: underline;
+}
+
+.contact-form {
+  border: 2px solid #1e90ff; /* Electric Blue Border */
+}
+
+.contact-form label {
+  display: block;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  color: #f8f9fa; /* Ghost White */
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 2px solid #1e90ff; /* Electric Blue Border */
+  border-radius: 4px;
+  background-color: #2e3a40; /* Slate Gray Background */
+  color: #f8f9fa; /* Ghost White */
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+.submit-button {
+  background-color: #1e90ff; /* Electric Blue */
+  color: #f8f9fa; /* Ghost White */
+  padding: 0.75rem 2rem;
+  border: 2px solid #1e90ff; /* Electric Blue Border */
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #187bcd; /* Slightly Darker Blue */
+  border-color: #187bcd; /* Slightly Darker Blue Border */
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #0d1b2a; /* Dark Charcoal */
+  padding: 2rem 0;
+  text-align: center;
+  color: #f8f9fa; /* Ghost White Text */
+  border-top: 2px solid #1e90ff; /* Electric Blue Border */
+}
+
+.footer p {
+  margin: 0;
+}
+
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  color: #1e90ff; /* Electric Blue */
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #187bcd; /* Slightly Darker Blue */
 }
